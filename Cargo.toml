@@ -171,11 +171,10 @@ assets = [
     { source = "resources/niri-shutdown.target", dest = "/usr/lib/systemd/user/", mode = "644" },
 ]
 [package.metadata.generate-rpm.requires]
-alacritty = "*"
 fuzzel = "*"
 
 [package.metadata.deb]
-depends = "alacritty, fuzzel"
+depends = "fuzzel"
 assets = [
     ["target/release/niri", "usr/bin/", "755"],
     ["resources/niri-session", "usr/bin/", "755"],
